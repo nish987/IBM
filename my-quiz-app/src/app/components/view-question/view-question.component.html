@@ -1,0 +1,37 @@
+<!-- <p>view-question works!</p>
+
+<ul class="list-group">
+      <li class="list-group-item" *ngFor="let q of ques"> <p>{{q.text}}<button (click)="displayOptions(this.q)">display whole question</button>
+        
+        
+      </p>
+      <div *ngFor="let c of choi" >
+          {{c.text}}
+      </div>
+    </li>
+
+      <p>{{currentquestion}}</p> -->
+
+
+
+      <div class="container">
+        <div class="jumbotron">
+            <div class="row">
+                <div class="column">
+                    <h1 class="display-4">{{currentquestion.text}}</h1>
+                    <div *ngFor="let c of choi" class="lead">
+                        <label><input type="radio" (click)="calculate(c.isAnswer)" name="answer">{{c.text}}</label>
+                    </div>
+                    <span class="lead" *ngIf="! isLastQuestion">
+                        <a class="btn btn-primary btn-lg"  (click)="nextQuestion()">Next Question</a>
+                    </span>
+                    <span class="lead" *ngIf="! isFirstQuestion" style="margin-left: auto">
+                        <a class="btn btn-primary btn-lg" (click)="previousQuestion()">Previous Question</a>
+                    </span>
+                    <span class="lead" style="margin-left: auto">
+                        <a class="btn btn-primary btn-lg" (click)="viewResult()">Submit</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>

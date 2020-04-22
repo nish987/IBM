@@ -1,0 +1,15 @@
+<!-- <p>view-quiz works!</p>
+<ul class="list-group">
+    <li class="list-group-item" *ngFor="let quizzes of quiz"> <p>{{quizzes.id}} : {{quizzes.name}} <button (click)= "displayquestion(quizzes)">let's start</button> 
+        
+        
+    </p></li> -->
+
+
+    <p>view-quiz works!</p>
+<div class="card" style="width: 18rem;" *ngFor="let quizzes of quiz">
+    <div class="card-body">
+        <h5 class="card-title">{{quizzes.name}}</h5>
+        <button class="btn btn-primary" (click)="displayquestion(quizzes)">Take Quiz</button> 
+    </div>
+</div>
